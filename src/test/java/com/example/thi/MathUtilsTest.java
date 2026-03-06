@@ -80,13 +80,5 @@ class MathUtilsTest {
             service.update(spMoi, "SP99");
             assertTrue(service.getAll().isEmpty());
         }
-//
-//
-//        @Test
-//        void testUpdateNonExistent() {
-//            SanPham spMoi = new SanPham("SP99", "No", 1, 100, 1, "No");
-//            service.update(spMoi, "SP99");
-//            assertTrue(service.getAll().isEmpty());
-//        }
     }
 }
