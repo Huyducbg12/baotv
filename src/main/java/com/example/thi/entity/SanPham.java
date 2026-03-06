@@ -4,7 +4,7 @@ import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class NhanVien {
+public class SanPham {
     //Tạo class SanPham gồm các thuộc tính ma - String , ten - String,
     //namBaoHanh - int, gia - float, soLuong - int, danhMuc - String 
     String ma;
@@ -14,10 +14,10 @@ public class NhanVien {
     int soLuong;
     String danhMuc;
 
-    public NhanVien() {
+    public SanPham() {
     }
 
-    public NhanVien(String ma, String ten, int namBaohanh, float gia, int soLuong, String danhMuc) {
+    public SanPham(String ma, String ten, int namBaohanh, float gia, int soLuong, String danhMuc) {
         this.ma = ma;
         this.ten = ten;
         this.namBaohanh = namBaohanh;

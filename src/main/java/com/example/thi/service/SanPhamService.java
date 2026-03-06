@@ -1,13 +1,31 @@
 package com.example.thi.service;
 
-import com.example.thi.entity.NhanVien;
 
-public class NhanVienService {
-    //String ma;
-    //    String ten;
-    //    int namBaohanh;
-    //    float gia;
-    //    int soLuong;
-    //    String danhMuc;
-    private NhanVien nhanVien = new NhanVien("nv01","Duc",2020,20,1,"tot");
+import com.example.thi.entity.SanPham;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SanPhamService {
+    private List<SanPham> list = new ArrayList<>();
+
+    public void add(SanPham sp) {
+        list.add(sp);
+    }
+
+    public void update(SanPham sp, String ma) {
+        if (sp == null) {
+            throw new IllegalArgumentException();
+        }
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getMa().equals(ma)) {
+                list.set(i, sp);
+                return;
+            }
+        }
+    }
+
+    public List<SanPham> getAll() {
+        return list;
+    }
 }
